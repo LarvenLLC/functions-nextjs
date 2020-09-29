@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "transform-runtime": {
+          "corejs": false
+        }
+      }
+    ]
+  ],
+  "plugins": [["@babel/plugin-proposal-decorators", { "legacy": true }]]
+}
