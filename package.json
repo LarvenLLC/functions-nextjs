@@ -20,6 +20,7 @@
     "firebase": "^7.14.2",
     "firebase-admin": "^8.11.0",
     "firebase-functions": "^3.6.1",
+    "firestorter": "^2.0.1",
     "lingojs": "^2.0.5",
     "mobx": "^5.15.6",
     "mobx-react": "^6.3.0",
