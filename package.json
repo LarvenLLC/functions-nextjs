@@ -1,8 +1,8 @@
 {
   "name": "functions-nextjs",
-  "version": "3.1.0",
+  "version": "3.5.0",
   "description": "Next.js Static Site Generation and Server Side Rendering on Firebase Hosting with Cloud Functions",
-  "author": "James Hegedus, Adam (BossBele) Beleko",
+  "author": "Adam (BossBele) Beleko",
   "license": "MIT",
   "main": "server.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "deploy": "firebase deploy"
   },
   "engines": {
-    "node": "10"
+    "node": "12"
   },
   "dependencies": {
     "firebase": "^7.14.2",
@@ -29,8 +29,7 @@
     "next-mobx-wrapper": "^0.4.0",
     "numeral": "^2.0.6",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "swr": "^0.2.0"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.10.5",
