@@ -1,5 +1,7 @@
 name: "Workflow"
 on: [push]
+  branches:
+    - development
 
 jobs:
   todo_issues:
