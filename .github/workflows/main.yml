@@ -1,8 +1,5 @@
 name: "Workflow"
-on:
-  push:
-    branches:
-      - development
+on: [push]
 
 jobs:
   todo_issues:
