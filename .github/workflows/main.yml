@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Get todos action step
         id: issue
-        uses: LarvenLLC/todo-issues@v1.1
+        uses: LarvenLLC/todo-issues@v1.2
         with:
           repo-token: ${{ secrets.GH_TOKEN }}
           path: "./todo.md"
