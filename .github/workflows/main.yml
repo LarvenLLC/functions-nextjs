@@ -10,7 +10,7 @@ jobs:
         id: issue
         uses: LarvenLLC/todo-issues@v1.1
         with:
-          repo-token: ${{ GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           path: "./todo.md"
       # Use the output from the `issue` step
       - name: Get the number of issues created
