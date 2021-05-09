@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Get todos action step
         id: issue
-        uses: LarvenLLC/todo-issues/actions/todo-issues
+        uses: LarvenLLC/todo-issues/actions/todo-issues@v1.1
         with:
           path: "./todo.md"
       # Use the output from the `issue` step
