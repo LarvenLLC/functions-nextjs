@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  todo_issues:
+    runs-on: ubuntu-latest
+    name: A job to create issues from todos
+    steps:
+      - name: Get todos action step
+        id: issue
+        uses: actions/todo-issues
+        with:
+          path: "./todo.md"
+      # Use the output from the `issue` step
+      - name: Get the number of issues created
+        run: echo "Created ${{ steps.issue.outputs.issues }} issue(s)"
