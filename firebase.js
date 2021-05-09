@@ -3,6 +3,7 @@ import "firebase/auth"; // If you need it
 import "firebase/firestore"; // If you need it
 import "firebase/storage"; // If you need it
 import "firebase/analytics"; // If you need it
+import { initFirestorter } from "firestorter";
 
 const clientCredentials = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -21,7 +22,8 @@ if (typeof window !== "undefined" && !firebase.apps.length) {
   firebase.initializeApp(clientCredentials);
   // To enable analytics. https://firebase.google.com/docs/analytics/get-started
   if ("measurementId" in clientCredentials) firebase.analytics();
-  //
+  // Initialize firestorter
+  initFirestorter({ firebase: firebase });
 }
 
 export default firebase;

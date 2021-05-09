@@ -22,25 +22,23 @@ function MyApp({ Component, pageProps, store }) {
   }, []);
 
   useEffect(() => {
-    if (!loading) {
-      let user = firebase.auth().currentUser;
+    const unsubscribe = firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
+        // User is signed in.
+        store.userStore.setUser(user);
+      } else {
+        // User is signed out / no user
+        // anonymous sign in
         firebase
-          .firestore()
-          .collection("customers")
-          .doc(user.uid)
-          .onSnapshot(function (doc) {
-            let obj = doc.data();
-            let str = setInterval(() => {
-              if (store.userStore.hasOwnProperty("userRegistry")) {
-                store.userStore.setUser(obj);
-                clearInterval(str);
-              }
-            }, 3000);
-          });
+          .auth()
+          .signInAnonymously()
+          .catch((error) => console.error(error));
       }
-    }
-  }, [loading]);
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   return (
     <>
